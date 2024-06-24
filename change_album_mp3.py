@@ -21,7 +21,7 @@ def update_album_in_folder(folder_path):
                     original_album = audio['TALB'].text[0]
                     
                     # 修改专辑名
-                    # new_album = original_album + '[mp3]'
+                    new_album = original_album + '[mp3]'
                     new_album = original_album
                     audio['TALB'] = TALB(encoding=3, text=new_album)
 
