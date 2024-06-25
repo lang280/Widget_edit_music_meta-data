@@ -21,24 +21,25 @@ def update_album_in_folder(folder_path):
                     original_album = audio['TALB'].text[0]
                     
                     # 修改专辑名
-                    new_album = original_album + '[mp3]'
+                    # new_album = original_album + '[mp3]'
                     new_album = original_album
+                    # new_album = '周杰伦单曲集[MP3]'
                     audio['TALB'] = TALB(encoding=3, text=new_album)
 
-                    # 修改评论信息
-                    new_comment = "For Eva, my love."
-                    audio['COMM'] = COMM(encoding=3, lang='eng', desc='', text=new_comment)
+                    # # 修改评论信息
+                    # new_comment = ""
+                    # audio['COMM'] = COMM(encoding=3, lang='eng', desc='', text=new_comment)
 
                     # 修改Genre信息
-                    new_genre = "Taylor Swift[MP3]"
+                    new_genre = "原声带[MP3]"
                     audio['TCON'] = TCON(encoding=3, text=new_genre)
 
                     # 修改Composer信息
-                    new_composer = "Taylor Swift[MP3]"
+                    new_composer = "周杰伦[MP3]"
                     audio['TCOM'] = TCOM(encoding=3, text=new_composer)
 
                     # 修改Author信息
-                    new_author = "Taylor Swift[MP3]"
+                    new_author = "周杰伦[MP3]"
                     audio['TPE1'] = TPE1(encoding=3, text=new_author)
                     
                     # 保存更改
